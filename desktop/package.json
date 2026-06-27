@@ -1,0 +1,36 @@
+{
+  "name": "tunnelbridge",
+  "version": "1.0.0",
+  "description": "TunnelBridge — share your VPN connection with your other devices, with live monitoring",
+  "author": "TunnelBridge",
+  "main": "electron/main.cjs",
+  "scripts": {
+    "dev:vite": "vite",
+    "build:vite": "vite build",
+    "start": "electron .",
+    "dist": "vite build && electron-builder --win portable"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "vite": "^6.0.7"
+  },
+  "build": {
+    "appId": "com.tunnelbridge.app",
+    "productName": "TunnelBridge",
+    "directories": { "output": "release", "buildResources": "build" },
+    "files": ["dist/**/*", "electron/**/*"],
+    "win": {
+      "target": "portable",
+      "icon": "build/icon.ico"
+    },
+    "portable": {
+      "artifactName": "TunnelBridge.exe"
+    },
+    "compression": "normal"
+  }
+}

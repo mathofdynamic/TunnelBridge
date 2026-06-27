@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# build output
+/dist/
+desktop/dist/
+desktop/release/
+desktop/build/icon.html
+
+# large binary — distributed via GitHub Releases
+*.exe
+
+# superseded python prototype (replaced by the Electron app)
+share_vpn.py
+web_assets.py
+Start.bat
+Setup-Once-AsAdmin.bat
+__pycache__/
+
+# misc
+*.log
+.DS_Store
+Thumbs.db
